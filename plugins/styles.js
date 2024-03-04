@@ -89,6 +89,22 @@ Styles.PromPD =  {
     color: '#ada228',
     fillOpacity: .2,
 }
+Styles.Waterways = {
+	stroke: true,
+	weight: 3,
+	dashArray: '',
+	opacity: 0.7,
+	color: '#006699',
+	fillOpacity: .2,
+}
+/*Styles.RestrictedWaterways = {
+	stroke: true,
+	weight: 3,
+	dashArray: '',
+	opacity: 0.7
+	color: '#cc0000',
+	fillOpacity: .2,
+}*/
 
 function colorize(layer) {
     let layerStyle = layer.feature.properties.style
@@ -101,5 +117,7 @@ function colorize(layer) {
     else if (layerStyle=="ArborPD"){layer.setStyle(Styles.ArborPD)}
     else if (layerStyle=="RedwoodPD"){layer.setStyle(Styles.RedwoodPD)}
     else if (layerStyle=="PromPD"){layer.setStyle(Styles.PromPD)}
+	else if (layerStyle=="Waterways"){layer.SetStyle(Styles.Waterways)}
+	/*else if (layerStyle=="RestrictedWaterways"){layer.setStyle(Styles.RestrictedWaterways)}*/
     layer.redraw()
   }
